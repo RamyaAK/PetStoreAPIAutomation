@@ -1,5 +1,6 @@
 package petStoreAPITests;
 
+import base.BaseTest;
 import builder.CreatePetBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -10,7 +11,7 @@ import petStore.AddNewPetToStore.response.AddNewPetResponse;
 import petStore.GetPetByTag.GetPetByTagsClient;
 import petStore.GetPetByTag.response.GetPetByTagsResponse;
 
-public class GetPetByTagNamesTest {
+public class GetPetByTagNamesTest extends BaseTest {
     AddNewPetRequest addNewPetRequest1;
     AddNewPetRequest addNewPetRequest2;
 

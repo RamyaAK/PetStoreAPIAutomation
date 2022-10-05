@@ -1,5 +1,6 @@
 package petStoreAPITests;
 
+import base.BaseTest;
 import builder.CreatePetBuilder;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -10,7 +11,7 @@ import petStore.GetPetByStatus.GetPetByStatusClient;
 import petStore.GetPetByStatus.response.GetPetByStatusResponse;
 import petStore_Entities.Status;
 
-public class GetPetByStatusTest {
+public class GetPetByStatusTest extends BaseTest {
     AddNewPetRequest addNewPetRequest;
     @BeforeTest
     public void prepareTestData() {

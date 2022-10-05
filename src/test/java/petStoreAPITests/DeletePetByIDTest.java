@@ -1,5 +1,6 @@
 package petStoreAPITests;
 
+import base.BaseTest;
 import builder.CreatePetBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -11,7 +12,7 @@ import petStore.DeletePetByID.DeletePetByIDClient;
 import petStore.DeletePetByID.DeletePetResponse;
 import petStore_Entities.Pet;
 
-public class DeletePetByIDTest {
+public class DeletePetByIDTest extends BaseTest {
     AddNewPetRequest addNewPetRequest;
     AddNewPetResponse addNewPetResponse;
     Pet pet = new Pet();
