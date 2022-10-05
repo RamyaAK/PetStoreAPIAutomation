@@ -1,4 +1,4 @@
-package petStore.GetPetById.request;
+package petStore.GetPetById.response;
 
 import petStore.BaseResponse;
 import petStore_Entities.Category;

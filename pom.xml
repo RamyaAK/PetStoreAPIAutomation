@@ -96,6 +96,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>4.3.1</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- added allure-testng and aspectjweaver plugin for integrating allure reporting-->
         <dependency>
             <groupId>io.qameta.allure</groupId>

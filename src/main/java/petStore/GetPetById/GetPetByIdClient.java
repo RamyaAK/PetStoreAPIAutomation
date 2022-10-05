@@ -1,7 +1,7 @@
 package petStore.GetPetById;
 
 import io.restassured.response.Response;
-import petStore.GetPetById.request.GetPetByIdResponse;
+import petStore.GetPetById.response.GetPetByIdResponse;
 import properties.API_Properties;
 
 import static io.restassured.RestAssured.given;

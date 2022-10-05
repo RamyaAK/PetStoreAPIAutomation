@@ -3,13 +3,17 @@ package petStoreAPITests;
 import base.BaseTest;
 import builder.CreatePetBuilder;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import petStore.AddNewPetToStore.AddNewPetClient;
 import petStore.AddNewPetToStore.request.AddNewPetRequest;
 import petStore.AddNewPetToStore.response.AddNewPetResponse;
 import petStore.GetPetById.GetPetByIdClient;
-import petStore.GetPetById.request.GetPetByIdResponse;
+import petStore.GetPetById.response.GetPetByIdResponse;
+import org.hamcrest.Matchers.*;
+
+import static org.hamcrest.Matchers.equalTo;
 
 public class GetPetByIdTest extends BaseTest {
     AddNewPetRequest addNewPetRequest;
@@ -42,5 +46,10 @@ public class GetPetByIdTest extends BaseTest {
         Assert.assertEquals(addNewPetResponse.getCategory().getId(), 47476709);
         Assert.assertEquals(addNewPetResponse.getCategory().getName(), "laborum ullamco labore magna");
 
+    }
+
+    @AfterTest
+    public void closeTest() {
+        System.out.println("Test ended successfully!");
     }
 }
