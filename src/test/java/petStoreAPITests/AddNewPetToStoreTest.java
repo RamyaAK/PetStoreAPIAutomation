@@ -29,14 +29,21 @@ public class AddNewPetToStoreTest extends BaseTest {
         // calling AddNewPetClient with AddNewPetRequest object and saving the result in addNewPetResponse for assertion.
         addNewPetResponse = new AddNewPetClient().addNewPetToStore(addNewPetRequest);
 
+        int tag1Id = (int) addNewPetRequest.getTags().get(0).get("id");
+        int tag2Id = (int) addNewPetRequest.getTags().get(1).get("id");
+
+        String tag1Name = (String) addNewPetRequest.getTags().get(0).get("name");
+        String tag2Name = (String) addNewPetRequest.getTags().get(1).get("name");
+
+
         Assert.assertEquals(addNewPetResponse.getName(), "Rocky");
         Assert.assertEquals(addNewPetResponse.getPhotoUrls().get(0), "in occaecat");
 
-        Assert.assertEquals(addNewPetResponse.getTags().get(0).get("id"), 1412);
-        Assert.assertEquals(addNewPetResponse.getTags().get(1).get("id"), 3476);
+        Assert.assertEquals(addNewPetResponse.getTags().get(0).get("id"), tag1Id);
+        Assert.assertEquals(addNewPetResponse.getTags().get(1).get("id"), tag2Id);
 
-        Assert.assertEquals(addNewPetResponse.getTags().get(0).get("name"), "tag1");
-        Assert.assertEquals(addNewPetResponse.getTags().get(1).get("name"), "tag2");
+        Assert.assertEquals(addNewPetResponse.getTags().get(0).get("name"), tag1Name);
+        Assert.assertEquals(addNewPetResponse.getTags().get(1).get("name"), tag2Name);
 
         Assert.assertEquals(addNewPetResponse.getCategory().getId(), 47476709);
         Assert.assertEquals(addNewPetResponse.getCategory().getName(), "laborum ullamco labore magna");
