@@ -8,14 +8,14 @@ import properties.API_Properties;
 import static io.restassured.RestAssured.given;
 
 public class AddNewPetClient {
-    public AddNewPetResponse addNewPetToStore(AddNewPetRequest requestBody){
+    public AddNewPetResponse addNewPetToStore(AddNewPetRequest requestBody) {
         API_Properties api_properties = new API_Properties();
 
-        String url = String.format("%s/pet",api_properties.baseURL);
+        String url = String.format("%s/pet", api_properties.baseURL);
         System.out.println(requestBody.toString());
 
         Response response = given()
-                .header("Content-Type","application/json")
+                .header("Content-Type", "application/json")
                 .body(requestBody)
                 .when()
                 .post(url)

@@ -1,10 +1,10 @@
 package builder;
 
 import petStore.AddNewPetToStore.request.AddNewPetRequest;
-import petStore_Entities.Category;
-import petStore_Entities.Tag;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class CreatePetBuilder {
     AddNewPetRequest newPetRequest;
@@ -12,7 +12,7 @@ public class CreatePetBuilder {
 
     public CreatePetBuilder() {
         newPetRequest = new AddNewPetRequest();
-        Map<String,Object> categories = new CategoriesBuilder().build();
+        Map<String, Object> categories = new CategoriesBuilder().build();
         tags = new TagBuilder().build();
 
         newPetRequest.setName("Rocky");

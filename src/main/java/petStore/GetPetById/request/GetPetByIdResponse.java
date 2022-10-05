@@ -1,13 +1,12 @@
-package petStore.AddNewPetToStore.response;
+package petStore.GetPetById.request;
 
 import petStore.BaseResponse;
 import petStore_Entities.Category;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class AddNewPetResponse extends BaseResponse {
+public class GetPetByIdResponse extends BaseResponse {
     public long id;
     public Category category;
     public String name;
@@ -43,7 +42,7 @@ public class AddNewPetResponse extends BaseResponse {
         return photoUrls;
     }
 
-    public void setPhotoUrls(ArrayList<String> photoUrls) {
+    public void setPhotoUrls(List<String> photoUrls) {
         this.photoUrls = photoUrls;
     }
 
@@ -65,7 +64,7 @@ public class AddNewPetResponse extends BaseResponse {
 
     @Override
     public String toString() {
-        return "AddNewPetResponse{" +
+        return "GetPetByIdResponse{" +
                 "id=" + id +
                 ", category=" + category +
                 ", name='" + name + '\'' +
