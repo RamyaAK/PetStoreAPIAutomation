@@ -1,8 +1,6 @@
 package builder;
 
-import petStore.AddNewPetToStore.request.AddNewPetRequest;
-import petStore.UpdatePetDetails.request.UpdatePetRequest;
-import petStore_Entities.Status;
+import petStore.pet.UpdatePetDetails.request.UpdatePetRequest;
 import utils.RestUtils;
 
 import java.util.List;

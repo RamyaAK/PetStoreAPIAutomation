@@ -1,6 +1,6 @@
 package builder;
 
-import petStore.AddNewPetToStore.request.AddNewPetRequest;
+import petStore.pet.AddNewPetToStore.request.AddNewPetRequest;
 
 import java.util.Arrays;
 import java.util.List;
