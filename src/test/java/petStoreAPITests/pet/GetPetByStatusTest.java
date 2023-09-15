@@ -33,7 +33,7 @@ public class GetPetByStatusTest extends BaseTest {
         GetPetByStatusResponse[] responses = new GetPetByStatusClient().getPetByStatus(Status.pending);
         System.out.println("Number of pets with Status as available is "+responses.length);
         Assert.assertNotNull(responses);
-        Assert.assertEquals(responses[10].getStatus(),"pending");
+        Assert.assertEquals(responses[1].getStatus(),"pending");
     }
     @Test
     public void GetPetByStatusAsSoldTest(){
@@ -41,7 +41,7 @@ public class GetPetByStatusTest extends BaseTest {
         GetPetByStatusResponse[] responses = new GetPetByStatusClient().getPetByStatus(Status.sold);
         System.out.println("Number of pets with Status as available is "+responses.length);
         Assert.assertNotNull(responses);
-        Assert.assertEquals(responses[10].getStatus(),"sold");
+        Assert.assertEquals(responses[1].getStatus(),"sold");
     }
 
     @AfterTest
